@@ -16,9 +16,7 @@ WhatsApp Smart Group Hub keeps the normal group chat experience but adds an AI-p
 * **Jump-to-Message Integration:** Tap any item in the Hub to seamlessly switch back to the chat view and automatically scroll/highlight the source message.
 
 ## Prototype
-This is a Figma Make clickable prototype demonstrating the full core flow — chat detection, structured Hub cards, auto-updating on correction, and message verification.
-
-🔗 **Live prototype:** https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fullscreen=1&t=hsjBLydKG23U23aO-1&code-node-id=0-9
+https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fullscreen=1&t=hsjBLydKG23U23aO-1&code-node-id=0-9
 
 ## How to explore
 1. Open the prototype link above
@@ -28,5 +26,3 @@ This is a Figma Make clickable prototype demonstrating the full core flow — ch
 5. Tap the Biology assignment card to see the auto-updated correction
 6. Tap "View Original Message" to jump back to the source message, highlighted in the chat
 
-## Note
-This is a UI/UX prototype built for a hackathon — no backend or real AI processing is implemented; all data is static, designed to demonstrate the intended user experience.
