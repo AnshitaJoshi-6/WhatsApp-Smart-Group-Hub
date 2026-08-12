@@ -1,11 +1,18 @@
 # WhatsApp-Smart-Group-Hub
 
+<img width="1250" height="1000" alt="Whatsapp Smart Group Hub (3)" src="https://github.com/user-attachments/assets/e803a9c7-5df6-4b21-9915-1f165b12d4dd" />
+
+
 
 ## Problem
 School and college WhatsApp groups contain hundreds of messages. Important information like assignments, deadlines, exam dates, and room changes gets buried in casual conversation, causing students to miss updates.
 
+
+
 ## Solution
 WhatsApp Smart Group Hub keeps the normal group chat experience but adds an AI-powered "Hub" that automatically organizes important information — assignments, exams, announcements, and room changes — into structured, always-updated cards. When a teacher corrects information (e.g. a deadline change), the Hub updates automatically, and users can tap "View Original Message" to verify it against the real chat.
+
+
 
 ## ✨ Key Features
 
@@ -15,8 +22,12 @@ WhatsApp Smart Group Hub keeps the normal group chat experience but adds an AI-p
 * **Announcements & Timetable Changes:** Keeps track of room shifts (e.g., Lab moved to Room 204) and important notices.
 * **Jump-to-Message Integration:** Tap any item in the Hub to seamlessly switch back to the chat view and automatically scroll/highlight the source message.
 
+
+
 ## Prototype
 https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fullscreen=1&t=hsjBLydKG23U23aO-1&code-node-id=0-9
+
+
 
 ## How to explore
 1. Open the prototype link above
@@ -25,6 +36,9 @@ https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fulls
 4. Explore Assignments, Exams & Deadlines, Announcements, and Room/Timetable Changes
 5. Tap the Biology assignment card to see the auto-updated correction
 6. Tap "View Original Message" to jump back to the source message, highlighted in the chat
+
+
+<img width="1250" height="1000" alt="Whatsapp Smart Group Hub (3)" src="https://github.com/user-attachments/assets/3a2558c6-8cad-42e2-9557-df785a3a9511" />
 
 ## 🚀 Setup & Installation (Local Development)
 
