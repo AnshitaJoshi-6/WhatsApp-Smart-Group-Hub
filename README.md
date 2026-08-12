@@ -42,6 +42,14 @@ https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fulls
 5. Tap the Biology assignment card to see the auto-updated correction
 6. Tap "View Original Message" to jump back to the source message, highlighted in the chat
 
+   
+
+https://github.com/user-attachments/assets/0467385f-b5a7-4315-9a43-dcf26ea981ba
+
+
+
+
+
 
 
 ## 🚀 Setup & Installation (Local Development)
