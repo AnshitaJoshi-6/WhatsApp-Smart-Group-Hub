@@ -27,6 +27,11 @@ WhatsApp Smart Group Hub keeps the normal group chat experience but adds an AI-p
 ## Prototype
 https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fullscreen=1&t=hsjBLydKG23U23aO-1&code-node-id=0-9
 
+<img width="1530" height="1224" alt="1" src="https://github.com/user-attachments/assets/eb180d76-79b6-4685-8b7c-16688e1a01d0" />
+<img width="1530" height="1224" alt="2" src="https://github.com/user-attachments/assets/befbdd0e-8527-4ac7-80aa-edc452312891" />
+<img width="1530" height="1224" alt="3" src="https://github.com/user-attachments/assets/9eb6f684-cb51-4176-bfc7-d923e2a98cb4" />
+
+
 
 
 ## How to explore
@@ -38,7 +43,6 @@ https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fulls
 6. Tap "View Original Message" to jump back to the source message, highlighted in the chat
 
 
-<img width="1250" height="1000" alt="Whatsapp Smart Group Hub (3)" src="https://github.com/user-attachments/assets/3a2558c6-8cad-42e2-9557-df785a3a9511" />
 
 ## 🚀 Setup & Installation (Local Development)
 
