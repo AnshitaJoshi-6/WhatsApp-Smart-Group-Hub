@@ -26,3 +26,19 @@ https://www.figma.com/make/WA5xrck4iQhywNTOHjjoOd/WhatsApp-Smart-Group-Hub?fulls
 5. Tap the Biology assignment card to see the auto-updated correction
 6. Tap "View Original Message" to jump back to the source message, highlighted in the chat
 
+## 🚀 Setup & Installation (Local Development)
+
+To run and test this prototype locally on your machine, follow these simple steps:
+
+1. **Clone or Download** this repository to your local computer:
+   ```bash
+   git clone https://github.com/AnshitaJoshi-6/WhatsApp-Smart-Group-Hub.git```
+
+2. Open the project folder and ensure all core files (index.html, style.css, and script.js) are in the same directory.
+
+3. Run the Prototype:
+
+    **Double-click on index.html, OR
+
+    **Right-click index.html and select Open with -> Choose any modern web browser (Google Chrome, Microsoft Edge, Safari, etc.).
+
