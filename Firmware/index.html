@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Class Hub Extension</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="extension-container">
+        <!-- CHAT VIEW -->
+        <div id="chat-view" class="view active">
+            <header class="chat-header">
+                <div class="chat-title-info">
+                    <div class="group-avatar">B</div>
+                    <div>
+                        <h2>Biology Class 2026</h2>
+                        <p>Aditi, Rohan, Ms. Sharma +7 more</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button id="open-hub-btn" class="hub-trigger-btn" title="Open Class Hub">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                    </button>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </header>
+
+            <div class="chat-body" id="chat-body-container">
+                <div class="message-bubble teacher" id="msg-assignment">
+                    <span class="sender teacher-tag">Ms. Sharma <small>TEACHER</small></span>
+                    <p>Reminder: Biology assignment on cell structures due Friday.</p>
+                    <span class="time">9:20 AM</span>
+                </div>
+                <div class="message-bubble teacher correction" id="msg-correction">
+                    <span class="sender teacher-tag">Ms. Sharma <small>TEACHER</small></span>
+                    <div class="correction-badge"><i class="fa-solid fa-pen"></i> CORRECTION</div>
+                    <p>Correction: deadline is now Monday instead of Friday.</p>
+                    <span class="time">10:02 AM</span>
+                </div>
+                <div class="message-bubble teacher" id="msg-room">
+                    <span class="sender teacher-tag">Ms. Sharma <small>TEACHER</small></span>
+                    <p>Also tomorrow's class shifted to Room 204.</p>
+                    <span class="time">10:05 AM</span>
+                </div>
+                <div class="message-bubble" id="msg-exam">
+                    <span class="sender">Class Rep <small class="rep-tag">CLASS REP</small></span>
+                    <p>Mid-terms: Biology exam 28th Aug. 10 AM.</p>
+                    <span class="time">10:30 AM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HUB DASHBOARD VIEW -->
+        <div id="hub-view" class="view">
+            <header class="hub-header">
+                <button id="back-to-chat-btn" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Chat</button>
+                <h2>Biology Class 2026 — Hub</h2>
+                <p class="hub-subtitle">Everything important, organized automatically.</p>
+            </header>
+
+            <div class="hub-content">
+                <div class="hub-card" onclick="switchView('summary-detail')">
+                    <div class="card-icon bell"><i class="fa-solid fa-bell"></i></div>
+                    <div class="card-info">
+                        <h3>What did I miss?</h3>
+                        <p>47 new messages — tap to get a summary</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="hub-card" onclick="switchView('assignments-detail')">
+                    <div class="card-icon green"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="card-info">
+                        <h3>Assignments</h3>
+                        <p>3 active</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="hub-card" onclick="switchView('exams-detail')">
+                    <div class="card-icon purple"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="card-info">
+                        <h3>Exams & Deadlines</h3>
+                        <p>1 upcoming</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="hub-card" onclick="switchView('announcements-detail')">
+                    <div class="card-icon orange"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="card-info">
+                        <h3>Announcements</h3>
+                        <p>2 new</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="hub-card" onclick="switchView('timetable-detail')">
+                    <div class="card-icon pink"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="card-info">
+                        <h3>Room / Timetable Changes</h3>
+                        <p>1 today</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="recent-highlights">
+                    <h4>RECENT HIGHLIGHTS</h4>
+                    <ul>
+                        <li onclick="jumpToMessage('msg-correction')"><i class="fa-solid fa-circle-dot"></i> Biology deadline moved to Monday</li>
+                        <li onclick="jumpToMessage('msg-room')"><i class="fa-solid fa-circle-dot"></i> Class shifted to Room 204</li>
+                        <li onclick="jumpToMessage('msg-exam')"><i class="fa-solid fa-circle-dot"></i> Mid-term: Aug 28, 10 AM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 1: WHAT DID I MISS -->
+        <div id="summary-detail" class="view detail-view">
+            <header class="hub-header">
+                <button class="back-to-hub-btn"><i class="fa-solid fa-arrow-left"></i> Hub</button>
+                <h2>What did I miss?</h2>
+            </header>
+            <div class="detail-body">
+                <div class="smart-summary-box">
+                    <span class="tag-smart">✨ SMART SUMMARY</span>
+                    <p>Here's everything important from the last 47 messages in Biology Class 2026.</p>
+                </div>
+                <div class="mini-card" onclick="jumpToMessage('msg-correction')">
+                    <h4>📅 Deadline updated</h4>
+                    <p>Biology assignment deadline moved from Friday to Monday.</p>
+                </div>
+                <div class="mini-card" onclick="jumpToMessage('msg-room')">
+                    <h4>🏫 Room change</h4>
+                    <p>Tomorrow's class shifted to Room 204.</p>
+                </div>
+                <div class="mini-card" onclick="jumpToMessage('msg-exam')">
+                    <h4>📝 Mid-term exam</h4>
+                    <p>Biology exam on 28th August at 10 AM.</p>
+                </div>
+                <button class="action-btn-green back-to-hub-btn"><i class="fa-solid fa-arrow-left"></i> Back to Hub</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: ASSIGNMENTS -->
+        <div id="assignments-detail" class="view detail-view">
+            <header class="hub-header">
+                <button class="back-to-hub-btn"><i class="fa-solid fa-arrow-left"></i> Hub</button>
+                <h2>Assignments</h2>
+            </header>
+            <div class="detail-body">
+                <div class="assignment-item-card">
+                    <div class="asg-header">
+                        <span class="badge-green">Biology</span>
+                        <span class="badge-update">Updated</span>
+                    </div>
+                    <h3>Assignment — Cell Structures</h3>
+                    <p class="strike"><s>Friday</s> <span class="highlight-mon">Monday</span></p>
+                    <small><i class="fa-solid fa-circle-exclamation"></i> Auto-updated after correction — 2 hours ago</small>
+                    <div class="teacher-info-footer">
+                        <span><i class="fa-solid fa-user-tie"></i> Ms. Sharma (TEACHER)</span>
+                        <button class="view-msg-link" onclick="jumpToMessage('msg-correction')">View Details →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: EXAMS & DEADLINES -->
+        <div id="exams-detail" class="view detail-view">
+            <header class="hub-header">
+                <button class="back-to-hub-btn"><i class="fa-solid fa-arrow-left"></i> Hub</button>
+                <h2>Exams & Deadlines</h2>
+            </header>
+            <div class="detail-body">
+                <div class="assignment-item-card">
+                    <div class="asg-header">
+                        <span class="badge-green">Biology</span>
+                        <span class="badge-exam">Mid-term Exam</span>
+                    </div>
+                    <h3>Mid-term Exam</h3>
+                    <p style="margin: 6px 0; font-size: 13px;"><i class="fa-solid fa-calendar"></i> 28th August &nbsp;&bull;&nbsp; <i class="fa-solid fa-clock"></i> 10:00 AM</p>
+                    <div class="teacher-info-footer" style="margin-top: 15px;">
+                        <span><i class="fa-solid id-badge"></i> Class Rep</span>
+                        <button class="view-msg-btn-green" onclick="jumpToMessage('msg-exam')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Original Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 4: ANNOUNCEMENTS -->
+        <div id="announcements-detail" class="view detail-view">
+            <header class="hub-header">
+                <button class="back-to-hub-btn"><i class="fa-solid fa-arrow-left"></i> Hub</button>
+                <h2>Announcements</h2>
+            </header>
+            <div class="detail-body">
+                <div class="mini-card" onclick="jumpToMessage('msg-exam')" style="border-left-color: #ff9800; cursor: pointer;">
+                    <div class="asg-header"><span class="badge-green">Class Rep</span> <small>Today</small></div>
+                    <h4>Mid-terms schedule released</h4>
+                    <p>Biology exam on 28th Aug, 10 AM.</p>
+                </div>
+                <div class="mini-card" onclick="jumpToMessage('msg-room')" style="border-left-color: #00a884; cursor: pointer;">
+                    <div class="asg-header"><span class="badge-green">Ms. Sharma</span> <small>TEACHER</small></div>
+                    <h4>Room shifted for tomorrow's class</h4>
+                    <p>Class moved to Room 204 instead of the lab.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 5: ROOM / TIMETABLE CHANGES -->
+        <div id="timetable-detail" class="view detail-view">
+            <header class="hub-header">
+                <button class="back-to-hub-btn"><i class="fa-solid fa-arrow-left"></i> Hub</button>
+                <h2>Room / Timetable Changes</h2>
+            </header>
+            <div class="detail-body">
+                <div class="assignment-item-card" style="border-top-color: #e91e63;">
+                    <div class="asg-header">
+                        <span class="badge-green">Biology</span>
+                        <span class="badge-today">Today</span>
+                    </div>
+                    <h3>Room Change</h3>
+                    <p style="margin: 6px 0; font-size: 13px; font-weight: 500;">Class shifted from lab to Room 204</p>
+                    <small><i class="fa-solid fa-clock"></i> Tomorrow</small>
+                    <div class="teacher-info-footer" style="margin-top: 15px;">
+                        <span><i class="fa-solid fa-user-tie"></i> Ms. Sharma (TEACHER)</span>
+                        <button class="view-msg-btn-green" onclick="jumpToMessage('msg-room')"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Original Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
